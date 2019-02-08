@@ -2,9 +2,11 @@
 # First python program
 dir="/tmp"
 import sys,os,time,subprocess
-print "System information: "
-print
+sys.stdout.flush()
+
+print "System information: ",
 print(os.uname())
+print "User: %s" % os.getlogin()
 print "Current working dir is: %s" % os.getcwd()
 print "Changing working directory to",dir 
 os.chdir("/tmp")

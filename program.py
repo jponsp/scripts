@@ -25,9 +25,8 @@ if var is None:
     print "Variable var not declared"
 else:
     print "Variable var is declared and contain:",var,"sdaf"
-
+print
 tmp=os.popen('ls /var/tmp').read()
-print("\n")
 print("/tmp content")
 print(tmp)
 

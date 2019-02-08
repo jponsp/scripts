@@ -17,8 +17,8 @@ print "Content:"
 os.system("ls")
 print
 print "Open ports:"
-os.system("netstat -ant | grep -i LISTEN")
-print "\n"
+os.system("netstat -ant | grep -i LISTEN| grep -v tcp6 | awk '{print $4}' | cut -f 2 -d: | sort -n")
+print 
 
 var = "boooop"
 if var is None:

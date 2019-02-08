@@ -1,12 +1,19 @@
 #!/usr/bin/env python
 # First python program
-
+dir="/tmp"
 import sys,os,time,subprocess
-os.chdir("/tmp")
+print "System information: "
+print
+print(os.uname())
 print "Current working dir is: %s" % os.getcwd()
+print "Changing working directory to",dir 
+os.chdir("/tmp")
+os.getcwd()
+print "Current working dir is: %s" % os.getcwd()
+print
 print "Content:"
 os.system("ls")
-print "\n"
+print
 print "Open ports:"
 os.system("netstat -ant | grep -i LISTEN")
 print "\n"
